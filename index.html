@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pharmacy Phone Assistant – Navi Mumbai (in development)</title>
+  <meta name="description" content="A phone assistant for chemist shops in Navi Mumbai that will take medicine orders in Hindi, Marathi and English. Currently in development.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1d2327;
+      --muted: #5b6670;
+      --accent: #0f766e;
+      --accent-soft: #e6f4f2;
+      --notice-bg: #fff8e6;
+      --notice-border: #f0c36d;
+      --border: #e3e7ea;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111518;
+        --text: #e8ecef;
+        --muted: #a3adb5;
+        --accent: #5eead4;
+        --accent-soft: #15302d;
+        --notice-bg: #2b2414;
+        --notice-border: #8a6a2a;
+        --border: #2a3136;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Devanagari", sans-serif;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 32px 16px 48px; }
+    h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 8px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 12px; }
+    p { margin: 0 0 14px; }
+    .tagline { color: var(--muted); font-size: 1.05rem; }
+    .langs { color: var(--accent); font-weight: 600; }
+    .notice {
+      background: var(--notice-bg);
+      border: 1px solid var(--notice-border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 24px 0;
+    }
+    ul { padding-left: 1.2rem; margin: 0 0 14px; }
+    li { margin: 6px 0; }
+    .card {
+      background: var(--accent-soft);
+      border-radius: 10px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+    .contact a { color: var(--accent); }
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+      padding-top: 16px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Pharmacy Phone Assistant</h1>
+    <p class="tagline">A phone assistant for chemist shops in Navi Mumbai that takes medicine orders in
+      <span class="langs">Hindi, Marathi and English</span>.</p>
+    <p class="tagline" lang="hi">नवी मुंबई की केमिस्ट दुकानों के लिए फ़ोन असिस्टेंट।</p>
+  </header>
+
+  <div class="notice" role="note">
+    <strong>In development.</strong> This service is being built and tested. It is not yet available to
+    shops or customers, and only test data is used.
+  </div>
+
+  <h2>What it is being built to do</h2>
+  <p>Many chemist shops get calls at all hours. The assistant is designed to answer the shop's phone,
+    talk to callers in their own language, and pass each order to the shop's pharmacist.</p>
+  <ul>
+    <li>Answer calls to the shop and take medicine orders in Hindi, Marathi, English, or a mix.</li>
+    <li>Check medicines against the shop's own catalog and stock. It cannot add a medicine that isn't in the catalog.</li>
+    <li>For medicines that need a prescription, send the caller a WhatsApp link to upload a photo of it.</li>
+    <li>Answer simple questions about the shop, such as timings and delivery area.</li>
+    <li>Connect the caller to the pharmacist whenever needed.</li>
+  </ul>
+
+  <h2>Safety first</h2>
+  <div class="card">
+    <ul>
+      <li>A pharmacist reviews and confirms every order before it is packed.</li>
+      <li>The assistant never approves a prescription. Only the pharmacist can.</li>
+      <li>It does not give medical advice. Those questions go to the pharmacist or a doctor.</li>
+      <li>In an emergency it tells the caller to call 108 or 112 and transfers the call.</li>
+      <li>When asked, it says honestly that it is the shop's digital assistant, not a person.</li>
+    </ul>
+  </div>
+
+  <h2>Messages to customers</h2>
+  <p>When a customer places an order, the shop will send them transactional WhatsApp messages only:
+    a link to upload their prescription, and updates about that order. No promotional messages.</p>
+
+  <h2>Who it is for</h2>
+  <p>Chemist shops in Navi Mumbai, starting with a small pilot once development is complete.</p>
+
+  <h2>Contact</h2>
+  <p class="contact">Balpreet Gurm<br>
+    <a href="mailto:balpreetgurms@gmail.com">balpreetgurms@gmail.com</a></p>
+
+  <footer>
+    <p>© 2026 Balpreet Gurm · Navi Mumbai, India</p>
+  </footer>
+</main>
+</body>
+</html>
